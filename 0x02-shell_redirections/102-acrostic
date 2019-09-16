@@ -1,2 +1,2 @@
 #!/bin/bash
-cat acrostic | cut -c 1 | tr '\n' ' ' | cut -d" " -f 1-30 | tr -d ' '
+cat acrostic | cut -c 1 | tr '\n' ' ' | cut -d" " -f 1- | tr -d ' '
