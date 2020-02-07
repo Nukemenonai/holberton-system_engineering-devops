@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays a list of all my files
+
+files=$(ls ./*)
+for l in $files
+do
+    echo "$l" | cut -f 2- -d '-'
+done
