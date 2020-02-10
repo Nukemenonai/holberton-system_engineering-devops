@@ -3,7 +3,7 @@
 trap wont SIGTERM
 wont()
 {
-    echo "I won't die"
+    echo "I am invincible!!!"
 }
 bool=1
 while [ $bool = 1 ]
