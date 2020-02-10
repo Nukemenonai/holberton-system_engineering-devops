@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this script kills the previous indefinite script
+pkill --signal SIGKILL -f 7-highlander
