@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 #this script kills the previous indefinite script
-pid="$(grep bash)"
-kill $pid
+pkill bash
