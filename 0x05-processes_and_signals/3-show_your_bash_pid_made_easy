@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this script shows the PID along the nae of processes containing the word bash
+pgrep -l bash
