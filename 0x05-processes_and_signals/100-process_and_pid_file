@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#this script shows "to infinity andbeyond indefinitely"
+echo '' > /var/run/holbertonscript.pid
+trap wont SIGTERM
+wont()
+{
+    echo "I hate the kill command"
+}
+trap yuno SIGINT
+yuno()
+{
+    echo "Y U no love me?!"
+}
+trap del SIGQUIT
+trap del SIGTERM
+del()
+{
+    rm /var/run/holbertonscript.pid
+}
+bool=1
+while [ $bool = 1 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
