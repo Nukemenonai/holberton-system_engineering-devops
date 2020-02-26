@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # this script changes an localhost and ip address of facebook.com
-sudo sed -i '/127.0.0.1/c\127.0.0.2\tlocalhost' /etc/hosts
-echo -e "\n" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+cp /etc/hosts ~/hosts
+sudo sed -i '/127.0.0.1/c\127.0.0.2\tlocalhost' ~/hosts
+echo -e "\n" >> ~/hosts
+echo "8.8.8.8 facebook.com" >> ~/hosts
+cp -f ~/hosts /etc/hosts
