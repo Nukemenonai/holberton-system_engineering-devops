@@ -1,3 +1,4 @@
+# Puppet manifest to create a file
 file { '/tmp/holberton':
   ensure  => present,
   owner   => 'www-data',
