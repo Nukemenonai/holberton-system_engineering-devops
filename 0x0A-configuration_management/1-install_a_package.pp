@@ -1,3 +1,3 @@
 package { 'puppet-lint':
-  ensure  => 'latest',
+  ensure  => '2.1.1',
 }
