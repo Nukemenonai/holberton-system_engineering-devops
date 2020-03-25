@@ -2,11 +2,7 @@
 # this script installs an nginx web server
 sudo apt update -y
 sudo apt install nginx -y
-sudo apt install ufw -y
-sudo ufw allow 'Nginx HTTP'
-sudo ufw allow ssh
-sudo ufw allow 'OpenSSH'
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-new_str="server_name _;\n\trewrite ^\/redirect_me$ google.com permanent;"
-sudo sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-enabled/default
-sudo service nginx start
+new_str="server_name _;\n\trewrite ^\/redirect_me google.com permanent;"
+sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-enabled/default
+service nginx start
