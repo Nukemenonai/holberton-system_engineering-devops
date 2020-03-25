@@ -7,7 +7,7 @@ sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'OpenSSH'
 sudo ufw allow ssh
 echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
-new_str="server_name _\n\trewrite ^\/redirect_me$\ngoogle.com permanent;"
-new_str2="\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\troot \/usr\/share\/nginx\/html;\n\tinternal;}"
-sudo sed -i "s/server_name _;/$new_str$new_str2/" /etc/nginx/sites-enabled/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+new_str="server_name _\n\trewrite ^\/redirect_me$\ngoogle.com permanent;\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\troot \/usr\/share\/nginx\/html;\n\tinternal;}"
+sudo sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-enabled/default
 sudo service nginx start
