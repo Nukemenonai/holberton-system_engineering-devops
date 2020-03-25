@@ -2,8 +2,9 @@
 # this script installs an nginx web server
 sudo apt-update -y
 sudo apt-install nginx -y
+sudo apt install ufw -y
 sudo ufw allow 'Nginx HTTP'
-sudo ufw allow 'OpenSSH'
 sudo ufw allow ssh
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo ufw allow 'OpenSSH'
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 sudo service nginx start
