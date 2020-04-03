@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # This script fixes the nginx server
-new_str="listen 80 default_server;"
-sed -i "s/listen 8080 default_server/$new_str/" /etc/nginx/sites-enabled/default
-new_str2="listen [::]:80 default_server ipv6only=on;"
-sed -i "s/listen [::]:8080 default_server ipv6only=on;/$new_str2/" /etc/nginx/sites-enabled/default
+sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 service nginx restart
