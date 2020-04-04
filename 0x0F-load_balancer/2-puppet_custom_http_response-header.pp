@@ -14,7 +14,7 @@ exec {'install_nginx':
 
 exec {'sed':
   require => Exec['install_nginx'],
-  command => 'sudo sed -i "70i \ \tadd_header X-Served-By ${hostname};/" /etc/nginx/nginx.conf',
+  command => 'sudo sed -i "20i \ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf',
   path    => ['/usr/bin/','/bin'],
   returns => [1, 0]
 }
