@@ -4,6 +4,6 @@ sudo apt update -y
 sudo apt install nginx -y
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-new_str="server_name _;\n\trewrite ^\/redirect_me google.com permanent;\n\tadd_header X-Served-By \$hostname;\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\t\troot \/usr\/share\/nginx\/html;\n\t\tinternal;}"
+new_str="server_name _;\n\trewrite ^\/redirect_me google.com permanent;\n\tadd_header X-Served-By \$hostname;\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\troot \/usr\/share\/nginx\/html;\n\tinternal;}"
 sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-enabled/default
 service nginx start
