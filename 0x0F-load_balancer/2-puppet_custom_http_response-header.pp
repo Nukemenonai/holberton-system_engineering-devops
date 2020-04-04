@@ -21,7 +21,7 @@ exec {'sed':
 
 exec {'restart':
   require => Exec['sed'],
-  command => 'sudo service nginx restart',
+  command => 'sudo service nginx start',
   path    => ['/usr/bin/','/bin'],
   returns => [1, 0]
 }
