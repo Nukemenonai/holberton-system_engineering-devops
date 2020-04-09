@@ -1,0 +1,10 @@
+# 0x10. HTTPS SSL
+
+## Learning objectives
+
+* What is HTTPS SSL 2 main roles
+* What is the purpose encrypting traffic
+* What SSL termination means
+
+## Contact
+* David Ovalle <1087@holbertonschool.com>
