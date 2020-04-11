@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this script executes the whoami command as some other user
+sudo -u "$" whoami
