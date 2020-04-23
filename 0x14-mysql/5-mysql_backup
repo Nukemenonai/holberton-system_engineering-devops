@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 # this script makes a compressed archive out of a database
-mysqldump --all-databases --user=root --password="$1" > backup.sql
+if [ $# -gt 0 ]
+then
+    pass="$1"
+else
+    pass=""
+fi
+
+mysqldump --all-databases --user=root --password=$pass > backup.sql
 tar -zcvf "$(date + '%d-%m-%Y')".tar.gz backup.sql
