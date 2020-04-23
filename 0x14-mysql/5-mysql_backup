@@ -8,4 +8,5 @@ else
 fi
 
 mysqldump --all-databases --user=root --password=$pass > backup.sql
-tar -zcvf "$(date + '%d-%m-%Y')".tar.gz backup.sql
+now=(date +'%d-%m-%Y')
+tar -czf "$now".tar.gz backup.sql
