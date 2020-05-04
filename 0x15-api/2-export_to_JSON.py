@@ -14,7 +14,7 @@ if __name__ == "__main__":
     ID = argv[1]
 
     USERNAME = get(base_url + "users",
-                        params={"id": ID}).json()[0].get('username')
+                   params={"id": ID}).json()[0].get('username')
 
     TOTAL_NUMBER_OF_TASKS = get(base_url + "todos",
                                 params={"userId": ID}).json()
@@ -27,8 +27,7 @@ if __name__ == "__main__":
     for item in TOTAL_NUMBER_OF_TASKS:
         data[ID].append({"task": item.get('title'),
                          "completed": item.get('completed'),
-                         "username": USERNAME,
-                     })
+                         "username": USERNAME})
 
     """
     print(data)
