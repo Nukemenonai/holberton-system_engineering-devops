@@ -14,7 +14,7 @@ if __name__ == "__main__":
     ID = argv[1]
 
     USERNAME = get(base_url + "users",
-                        params={"id": ID}).json()[0].get('username')
+                   params={"id": ID}).json()[0].get('username')
 
     TOTAL_NUMBER_OF_TASKS = get(base_url + "todos",
                                 params={"userId": ID}).json()
