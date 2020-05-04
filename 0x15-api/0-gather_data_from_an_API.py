@@ -29,4 +29,4 @@ if __name__ == "__main__":
                   len(TOTAL_NUMBER_OF_TASKS)))
 
     for item in NUMBER_OF_DONE_TASKS:
-        print("\t{}".format(item.get('title')))
+        print("\t {}".format(item.get('title')))
