@@ -13,8 +13,8 @@ if __name__ == "__main__":
     base_url = "https://jsonplaceholder.typicode.com/"
     ID = argv[1]
 
-    EMPLOYEE_NAME = get(base_url + "users",
-                        params={"id": ID}).json()[0].get('name')
+    USERNAME = get(base_url + "users",
+                        params={"id": ID}).json()[0].get('username')
 
     TOTAL_NUMBER_OF_TASKS = get(base_url + "todos",
                                 params={"userId": ID}).json()
@@ -26,5 +26,5 @@ if __name__ == "__main__":
     with open('{}.csv'.format(ID), 'w') as csvfile:
         for item in TOTAL_NUMBER_OF_TASKS:
             l = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-            l.writerow([ID, EMPLOYEE_NAME, item.get('completed'),
+            l.writerow([ID, USERNAME, item.get('completed'),
                         item.get('title')])
