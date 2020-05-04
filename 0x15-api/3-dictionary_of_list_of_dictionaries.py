@@ -22,9 +22,10 @@ if __name__ == "__main__":
         data[ID] = []
 
         for item in USR_TASKS:
-            data[ID].append({"task": item.get('title'),
+            data[ID].append({"username": USERNAME,
+                             "task": item.get('title'),
                              "completed": item.get('completed'),
-                             "username": USERNAME})
+                             })
 
     with open('todo_all_employees.json', 'a') as jsonfile:
         json.dump(data, jsonfile)
