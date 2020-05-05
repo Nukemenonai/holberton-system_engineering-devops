@@ -27,5 +27,5 @@ if __name__ == "__main__":
                              "completed": item.get('completed'),
                              })
 
-    with open('todo_all_employees.json', 'a') as jsonfile:
+    with open('todo_all_employees.json', 'w') as jsonfile:
         json.dump(data, jsonfile)
