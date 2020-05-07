@@ -11,7 +11,7 @@ def top_ten(subreddit):
     base = 'https://api.reddit.com/r/'
     user_agent = {'User-agent': 'david/1.0.0'}
     r = requests.get(base + subreddit + '/hot', headers=user_agent,
-                     allow_redirects=False, params{"limit": 10})
+                     allow_redirects=False, params={"limit": 10})
     if r.status_code != 200:
         print(None)
         return None
