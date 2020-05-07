@@ -14,4 +14,7 @@ def number_of_subscribers(subreddit):
     user_agent = {'User-agent': 'Mozilla/5.0'}
     r = requests.get(base + subreddit + '/about.json', headers=user_agent)
     data = r.json()
-    return (data["data"]["subscribers"])
+    try:
+        return (data["data"]["subscribers"])
+    except KeyError:
+        return 0 
