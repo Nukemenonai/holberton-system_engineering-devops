@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# gracefully restart the gunicirn application 
+sudo pkill -HUP gunicorn
+
