@@ -6,5 +6,5 @@ This unit enphasizes automation, scalability and reliability to be familiar with
 
 ## Contact
 
-David Ovalle <1087@holbertonschool.com>
-[Linkedin](https://www.linkedin.com/in/david-giovani-ovalle-ariza/)
+* David Ovalle <1087@holbertonschool.com>
+* [Linkedin](https://www.linkedin.com/in/david-giovani-ovalle-ariza/)
